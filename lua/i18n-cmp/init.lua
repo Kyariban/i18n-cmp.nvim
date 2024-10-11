@@ -59,6 +59,12 @@ M.setup = function(opts)
 			callback({ items = items })
 		end,
 	})
+
+	require("cmp").setup.filetype(opts.filetypes, {
+		sources = {
+			{ name = "i18n" },
+		},
+	})
 end
 
 return M
